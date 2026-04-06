@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "helium-addon",
+  "version": "${version}",
+  "name": "Helium Addon",
+  "description": "An helium addon.",
+  "authors": [
+    "Donalp012",
+    "ItsDarexMC"
+  ],
+  "contact": {
+    "sources": "https://github.com/carcantol-creator/Hydrogen-Addon"
+  },
+  "icon": "assets/icons/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.hydrogen.dyd.HeliumMaster"
+    ]
+  },
+  "mixins": [
+    "helium-addon.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "225,55,0",
+    "modmenu": {
+      "parent": {
+        "id": "meteor-client"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${mc_version}"],
+    "meteor-client": "*"
+  }
+}
